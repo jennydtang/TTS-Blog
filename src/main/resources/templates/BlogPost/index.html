@@ -34,22 +34,22 @@
                 <p th:text="${blog.author}"></p>
                 <p th:text="${blog.blogEntry}"></p>
               </div>
-              <div class="card-footer"></div>
-              <!-- Get id for blog post and set it to variable id, then when rendered on html, make link go to specific blog post -->
-              <a href="#" th:href="@{blogposts/{id}(id=${blog.id})}">
-                <button class="btn btn-secondary">Edit this Post</button>
-              </a>
-              <a href="#" th:href="@{blogposts/delete/{id}(id=${blog.id})}">
-                <button class="btn btn-danger">Delete this Post</button>
-              </a>
+              <div class="card-footer">
+                <!-- Get id for blog post and set it to variable id, then when rendered on html, make link go to specific blog post -->
+                <a href="#" th:href="@{blogposts/{id}(id=${blog.id})}">
+                  <button class="btn btn-secondary">Edit this Post</button>
+                </a>
+                <a href="#" th:href="@{blogposts/delete/{id}(id=${blog.id})}">
+                  <button class="btn btn-danger">Delete this Post</button>
+                </a>
+              </div>
+              <!-- End of .card -->
             </div>
-            <!-- End of .card -->
+            <!-- End of .col-sm -->
           </div>
-          <!-- End of .col-sm -->
+          <!-- End of posts loop -->
         </div>
-        <!-- End of posts loop -->
       </div>
-    </div>
       <div class="row">
         <div class="col-xl">
           <a href="/blogposts/new">
